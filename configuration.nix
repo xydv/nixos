@@ -9,6 +9,7 @@
     [
       ./hardware-configuration.nix
       ./home/manager.nix
+      ./system
     ];
 
   boot.loader.systemd-boot.enable = true;
@@ -64,9 +65,7 @@
   programs.firefox.enable = true;
   nixpkgs.config.allowUnfree = true;
 
-  environment.systemPackages =
-
-  (with pkgs; [
+  environment.systemPackages = with pkgs; [
     telegram-desktop
     (discord.override {
       withOpenASAR = true;
@@ -74,7 +73,7 @@
     helix
     nixd
     nodejs
-  ]);
+  ];
 
   nix.settings.experimental-features = [
     "nix-command"

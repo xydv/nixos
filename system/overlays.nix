@@ -11,7 +11,7 @@
         };
       in
       {
-        inherit (unstable-pkgs) ollama kdePackages sddm;
+        inherit (unstable-pkgs) pear-desktop;
         unstable = unstable-pkgs;
       }
     )
