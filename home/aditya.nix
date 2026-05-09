@@ -10,8 +10,6 @@
   ];
 
   imports = [
-    ./programs/gh.nix
-    ./programs/git.nix
-    ./programs/zed.nix
+    ./programs
   ];
 }

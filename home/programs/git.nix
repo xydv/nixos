@@ -9,9 +9,5 @@
         email = "dedomil@tuta.io";
       };
     };
-    # signing = {
-    #   key = null;
-    #   signByDefault = true;
-    # };
   };
 }
