@@ -1,4 +1,4 @@
-{...}:
+{ pkgs, lib, ... }:
 
 {
   programs.zed-editor = {
@@ -34,6 +34,13 @@
         mode = "system";
         light = "Crimson Light";
         dark = "Crimson Dark";
+      };
+      lsp = {
+        rust-analyzer = {
+          binary = {
+            path = lib.getExe pkgs.rust-analyzer;
+          };
+        };
       };
     };
   };
