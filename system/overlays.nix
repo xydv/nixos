@@ -5,7 +5,7 @@
     (final: prev:
       let
         unstable-pkgs = import inputs.nixpkgs-unstable {
-          inherit (prev) system;
+          system = prev.stdenv.hostPlatform.system;
           config.allowUnfree = true;
           config.allowUnsupportedSystem = true;
         };

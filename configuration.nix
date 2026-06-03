@@ -13,6 +13,13 @@
   security.rtkit.enable = true;
   security.polkit.enable = true;
 
+  nixpkgs.config.allowUnfree = true;
+
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
+
   users.users.aditya = {
     isNormalUser = true;
     description = "aditya";
@@ -36,6 +43,6 @@
     zed-editor
     devenv
     nixd
-    inputs.pano-scrobbler.packages."x86_64-linux".default
+    inputs.pano-scrobbler.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 }

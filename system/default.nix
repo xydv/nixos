@@ -2,7 +2,7 @@
   imports = [
     ./bootloader.nix
     ./networking.nix
-    ./configuration.nix
+    ./config.nix
     ./overlays.nix
   ];
 }
